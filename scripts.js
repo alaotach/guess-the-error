@@ -46,5 +46,9 @@ function checkAnswer(selectedCode){
         } 
     else {
         resultDiv.innerHTML = `Wrong, Try Again!`
-        };
+        document.getElementById("imgcont").classList.add("shake");
+        setTimeout(() => {
+            document.getElementById("imgcont").classList.remove("shake");
+        }, 500);
+    };
 }
