@@ -11,6 +11,15 @@
         <h1> Guess The HTTP Error With Cats</h1>
         <div id="imgcont"><img src="cat.png" alt="beautiful car" id="car-image" class="catImg"/></div>
         <div id="choices"></div>
+        <div id="hint">
+            <button class="hint-show-btn" onclick="hint()">Show Hint</button>
+            <div id="hint-box" style="display:none;">
+                <div class="hint-content">
+                    <h3>Hint</h3>
+                    <button class="hint-close-btn" onclick="closeHint()">Close</button>
+                </div>
+            </div>
+        </div>
         <p id="result"></p>
     </main>
     <script src="scripts.js"></script>

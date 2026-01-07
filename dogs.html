@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess The Error - Cats Edition</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="container">
+        <h1> Guess The HTTP Error With Dogs</h1>
+        <div id="imgcont"><img src="dog.png" alt="beautiful dog" id="car-image" class="catImg"/></div>
+        <div id="choices"></div>
+        <div id="hint">
+            <button class="hint-show-btn" onclick="hint()">Show Hint</button>
+            <div id="hint-box" style="display:none;">
+                <div class="hint-content">
+                    <h3>Hint</h3>
+                    <button class="hint-close-btn" onclick="closeHint()">Close</button>
+                </div>
+            </div>
+        </div>
+        <p id="result"></p>
+    </main>
+    <script src="scripts.js"></script>
+    <script>initGame('dog')</script>
+</body>
+
+</html>
