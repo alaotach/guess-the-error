@@ -1,0 +1,26 @@
+.catImg {
+    width: 1200px;
+    height: 900px;
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+    clip-path: inset(7% 9% 23.5% 9%);
+    margin-top: -65px;
+    margin-left: -110px;
+}
+
+#imgcont {
+    width: 985px;
+    height: 625px;
+    overflow: hidden;
+    border: 2px solid #ff0000;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+.container {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
