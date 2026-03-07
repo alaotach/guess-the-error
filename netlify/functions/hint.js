@@ -25,7 +25,7 @@ exports.handler = async (event) => {
             messages: [{
                 role: "user",
                 content: [
-                    { type: "text", text: `Provide a hint about HTTP error code ${errorCode} without revealing the actual code. for guessing image game.` },
+                    { type: "text", text: `You are a hint generator for an HTTP status code guessing game. The code is ${errorCode}. Give a single short hint about what this status code means. RULES: never mention the number ${errorCode}, never say the words "status code" or "error code", do not say "without revealing" or anything meta. Just give the hint directly.` },
                     { type: "image", image_url: imageUrl }
                 ]
             }],
