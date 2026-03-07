@@ -68,21 +68,13 @@ async function hint(){
     hintBox.style.display = "flex";
     
     try {
-        const response = await fetch("https://ai.hackclub.com/proxy/v1/chat/completions",  {
+        const response = await fetch("/.netlify/functions/hint", {
             method: "POST",
-            headers: {
-                "Authorization": "Bearer sk-hc-v1-69e929c1d7ef426d9647f7338c7e20d011f0ead9a10b40418f2bbb2a85d1b856",
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                model: "google/gemini-2.5-flash",
-                messages: [{role: "user", content: [{"type": "text", "text": `Provide a hint about HTTP error code ${errorCode} without revealing the actual code. for guessing image game.`}, {"type": "image", "image_url": mode === "cat" ? `https://http.cat/${errorCode}`:`https://http.dog/${errorCode}.jpg`}]}],
-                max_tokens: 100,
-                temperature: 0.7
-            })
-        })
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ errorCode, mode })
+        });
         const data = await response.json();
-        hintDiv.innerHTML = data.choices[0].message.content;
+        hintDiv.innerHTML = data.hint;
     } catch (error) {
         hintDiv.innerHTML = `${error}`;
     }
